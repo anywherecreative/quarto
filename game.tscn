@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc233y45mfiui"]
+
+[ext_resource type="Texture2D" uid="uid://84gh23t3sac0" path="res://images/pieces/board.png" id="1_qbl0o"]
+[ext_resource type="Script" path="res://piece.gd" id="2_7yre6"]
+[ext_resource type="Texture2D" uid="uid://beobk26thtmws" path="res://images/pieces/dark/dark-circle-short-hallow.png" id="2_vmgnt"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(590, 330)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(570, 320)
+scale = Vector2(1, 4.6)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Board" type="Sprite2D" parent="."]
+position = Vector2(562, 318)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qbl0o")
+
+[node name="Piece" type="Sprite2D" parent="."]
+position = Vector2(457, -19)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_vmgnt")
+script = ExtResource("2_7yre6")
